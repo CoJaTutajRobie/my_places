@@ -1,0 +1,23 @@
+require 'rails_helper'
+
+
+
+describe "places/index.html.erb" do
+
+class PostsController < ApplicationController
+  def index
+    @places = Place.all
+  end
+end 
+
+ before do
+   assign(:place, Place.new(:id => "1"))
+  end
+
+  it "display latitude" do
+    render
+    expect(rendered).to include("Moje miejsca")
+  end
+
+
+end

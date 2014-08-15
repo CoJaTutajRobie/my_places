@@ -1,6 +1,0 @@
-require 'rails_helper'
-describe "places/index.html.erb" do
-before do
-assign(:places, [stub_model(Place, snippet: 'foo'), stub_model(Place, snippet: 'bar')])
-end
-end

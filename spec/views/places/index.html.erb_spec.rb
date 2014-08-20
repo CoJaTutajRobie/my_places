@@ -75,7 +75,7 @@ stub_model(Place,
 ]).page(1)
 )
 end
-it "check if there is a edit button after login" do
+it "check if there is a edit buttons" do
 @place = Place.create
 session[:place_id] = @place.id
 render
@@ -103,7 +103,7 @@ stub_model(Place,
 ]).page(1)
 )
 end
-it "check if there is a destroy button after login" do
+it "check if there is a destroy buttons" do
 @place = Place.create
 session[:place_id] = @place.id
 render
@@ -136,49 +136,5 @@ it "check if there is a new place button" do
 session[:place_id] = @place.id
 render
 assert_select "a", :text => 'Dodaj nowe miejsce', :count => 1
-end
-end
-describe "places/index" do
-before(:each) do
-assign(:places, Kaminari.paginate_array(
-[
-stub_model(Place,
-:latitude => "",
-:longitude => "",
-:address => "warsaw",
-:description => "stolica",
-:place_id => ""
-),
-stub_model(Place,
-:latitude => "",
-:longitude => "",
-:address => "warsaw",
-:description => "stolica",
-:place_id => ""
-)
-]).page(1)
-)
-end
-end
-describe "places/index" do
-before(:each) do
-assign(:places, Kaminari.paginate_array(
-[
-stub_model(Place,
-:latitude => "",
-:longitude => "",
-:address => "warsaw",
-:description => "stolica",
-:place_id => ""
-),
-stub_model(Place,
-:latitude => "",
-:longitude => "",
-:address => "warsaw",
-:description => "stolica",
-:place_id => ""
-)
-]).page(1)
-)
 end
 end

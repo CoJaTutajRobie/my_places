@@ -6,17 +6,17 @@ describe "places/edit.html.erb" do
    assign(:place, Place.new(:id => "1"))
   end
 
-  it "display latitude" do
+  it "display header" do
     render
     expect(rendered).to include("Edycja miejsca")
   end
 
-  it "display longitude" do
+  it "display wyświetl" do
     render
     expect(rendered).to include("Wyświetl")
   end
 
-  it "display address" do
+  it "display wróć" do
     render
     expect(rendered).to include("Wróć")
   end
